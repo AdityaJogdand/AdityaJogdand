@@ -16,8 +16,9 @@ Build a GitHub profile README that reads as "opening an AI coding assistant insi
 | Primary text | `#E6EDF3` |
 | Secondary text | `#8B949E` |
 | Accent (orange) | `#D97706` |
-| Prompt green | `#3FB950` |
 | Borders | `#30363D` |
+
+Orange (`#D97706`) is the single accent color used everywhere an accent is needed — `$` prompts, cursors, the status dot, checkmarks, section labels. There is no separate green; an earlier draft of this spec used `#3FB950` ("prompt green") for terminal-success elements, but the user asked for a single-accent look, so every one of those uses is orange instead.
 
 Typography: JetBrains Mono / IBM Plex Mono / Fira Code — monospace throughout.
 
@@ -53,7 +54,7 @@ AdityaJogdand/
 
 - `assets/banner.svg` — hero animated terminal window.
 - `assets/terminal.svg` — small reusable "> _" divider chip placed between major README sections instead of a plain `---` rule.
-- `assets/icons/status-dot.svg` — pulsing green dot used next to "Status ● Coding" in the banner.
+- `assets/icons/status-dot.svg` — pulsing orange dot used next to "Status ● Coding" in the banner.
 - `assets/icons/category-*.svg` — three minimal single-color line glyphs (chip/cpu for AI, server for Backend, angle-brackets for Languages), placed inline next to the corresponding `tree skills` category headers.
 - `assets/icons/mascot.svg` — a small, fully original single-stroke line-art creature (own design, not based on any existing brand mascot — not a crab, not an octopus, not GitHub's Octocat) rendered in the orange accent color. Purely a personality accent, placed once in the footer beside the `$ exit` block. No animation, minimal detail, sized small enough to stay a quiet accent rather than a focal point.
 - `svg/README.md` — short notes describing how the hand-authored SVG markup and animation timings are structured, so future edits to the animated assets don't require reverse-engineering the keyframes from scratch.
@@ -81,11 +82,11 @@ AdityaJogdand/
 ## Content sections (README.md body)
 
 All rendered as ` ```ansi ` fenced blocks. Color mapping used consistently across every block:
-- `$` prompt / command text → green `#3FB950`
+- `$` prompt / command text → orange `#D97706`
 - Section/category labels → orange `#D97706`
 - Primary values (names, tech names, project names) → near-white `#E6EDF3`
 - Secondary/supporting text → gray `#8B949E`
-- Checkmarks (research section) → green `#3FB950`
+- Checkmarks (research section) → orange `#D97706`
 
 Sections, in order, each preceded by an `<h2>` and (from the second section onward) the `assets/terminal.svg` divider chip:
 
@@ -93,7 +94,7 @@ Sections, in order, each preceded by an `<h2>` and (from the second section onwa
 2. **About** (`$ cat about.md`) — Name, Location (India), Focus (AI Systems, LLMs, Agents, Research, Backend Engineering), Education (B.Tech AI & DS). Content exactly as user-specified.
 3. **Skills** (`$ tree skills`) — three categories exactly as specified (AI: PyTorch, TensorFlow, Transformers, LangChain, HuggingFace; Backend: FastAPI, Flask, PostgreSQL, Redis, Docker; Languages: Python, C++, SQL, JavaScript), tree-drawn with `├──`/`└──` characters. Category icon (`assets/icons/category-*.svg`) sits inline before each category header.
 4. **Projects** (`$ tree projects`) — Adaptive-Cognitive-Runtime, Production-RAG, APK-Reasoning-System, Context-Compression, Knowledge-Graphs. Plain styled text, **not hyperlinked** (per user decision). Each gets a plausible one-line AI-engineer-appropriate description authored to fit the name (final wording confirmed at implementation time, easy to hand-edit).
-5. **Research** (`$ cat research.md`) — Agent Memory, Context Engineering, Long Context, Efficient Inference, Retrieval, AI Infrastructure, each prefixed with a green ✓.
+5. **Research** (`$ cat research.md`) — Agent Memory, Context Engineering, Long Context, Efficient Inference, Retrieval, AI Infrastructure, each prefixed with an orange ✓.
 6. **GitHub Stats** — `$ ./stats.sh` caption, then a centered `<table>`:
    - Row 1: `github-readme-stats` card + `github-readme-streak-stats` card side by side, both using custom-theme query params set to the exact palette hex values (no `#` prefix, per that service's URL format): `bg_color=0D1117&title_color=D97706&icon_color=D97706&text_color=E6EDF3&border_color=30363D`.
    - Row 2: top-languages card, same custom theme params, full width.
