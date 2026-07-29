@@ -2,12 +2,6 @@
   <img src="assets/banner.svg" width="760" alt="Terminal banner: whoami output for Aditya Jogdand">
 </div>
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=D97706&center=true&vCenter=true&width=480&lines=AI+Systems+Engineer;LLM+%26+Agent+Builder;Backend+Engineer;Context+%26+Inference+Researcher" alt="Typing SVG">
-</div>
-
-<br>
-
 ---
 
 ## About
