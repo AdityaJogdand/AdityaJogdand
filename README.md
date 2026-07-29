@@ -6,11 +6,30 @@
 
 ## About
 
-- 🎓 B.Tech **AI & Data Science** — India
-- 🔭 Building **AI Systems** — LLMs, Agents, RAG pipelines
-- 🧠 Researching **Context Engineering**, **Agent Memory**, **Efficient Inference**
-- 🛠️ Production **Backend Engineering** — FastAPI, PostgreSQL, Docker
-- 📬 **ajogdand112@gmail.com**
+<table>
+  <tr>
+    <td valign="top" width="50%">
+
+**Aditya Jogdand**
+B.Tech AI & Data Science · India
+
+I build production AI systems — LLMs, autonomous agents, and RAG pipelines — and research the hard problems underneath: context engineering, efficient inference, and agent memory.
+
+    </td>
+    <td valign="top" width="50%">
+
+| | |
+|---|---|
+| 🎓 | B.Tech AI & Data Science |
+| 📍 | India |
+| 🔭 | AI Systems · LLMs · Agents |
+| 🧠 | Context Engineering · Inference |
+| 🛠️ | FastAPI · PostgreSQL · Docker |
+| 📬 | ajogdand112@gmail.com |
+
+    </td>
+  </tr>
+</table>
 
 ---
 
