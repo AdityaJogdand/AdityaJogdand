@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- Palette (exact hex, no substitutions): background `#0D1117`, panel `#161B22`, primary text `#E6EDF3`, secondary text `#8B949E`, accent orange `#D97706`, prompt green `#3FB950`, borders `#30363D`.
+- Palette (exact hex, no substitutions): background `#0D1117`, panel `#161B22`, primary text `#E6EDF3`, secondary text `#8B949E`, accent orange `#D97706`, borders `#30363D`. Orange is the single accent color — used for `$` prompts, cursors, the status dot, checkmarks, and section labels. There is no green anywhere in this design (an earlier draft used `#3FB950` for some of those; it was replaced by request).
 - Font stack everywhere text is styled: `"JetBrains Mono", "Fira Code", "IBM Plex Mono", ui-monospace, monospace`.
 - No JavaScript anywhere — SVG/CSS animation only.
 - No light-mode variant — single fixed dark theme.
@@ -87,7 +87,7 @@ git commit -m "Scaffold profile README repo structure" --allow-empty
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12" role="img" aria-label="Status indicator">
   <style>
     .dot {
-      fill: #3FB950;
+      fill: #D97706;
       transform-origin: 8px 8px;
       animation: pulse 1.6s ease-in-out infinite;
     }
@@ -224,7 +224,7 @@ git commit -m "Add original mascot glyph"
       font: 600 15px "JetBrains Mono", "Fira Code", "IBM Plex Mono", ui-monospace, monospace;
     }
     .cursor {
-      fill: #3FB950;
+      fill: #D97706;
       animation: blink 1s steps(1, end) infinite;
     }
     @keyframes blink {
@@ -297,7 +297,7 @@ git commit -m "Add section-divider terminal chip"
       to { width: var(--w); }
     }
     .cursor {
-      fill: #3FB950;
+      fill: #D97706;
       opacity: 0;
       animation: blink 0.9s steps(1, end) infinite;
       animation-delay: 4.6s;
@@ -307,7 +307,7 @@ git commit -m "Add section-divider terminal chip"
       50%, 100% { opacity: 0; }
     }
     .status-dot {
-      fill: #3FB950;
+      fill: #D97706;
       transform-origin: 700px 293px;
       animation: pulse 1.6s ease-in-out infinite;
     }
@@ -369,7 +369,7 @@ The typewriter/cursor/pulse animations only run in a CSS-animation-capable rende
 
 Run: `open -a "Google Chrome" assets/banner.svg` (or substitute Safari/Firefox if Chrome isn't installed)
 
-Confirm: rounded window with soft shadow, orange-tinted title bar, three neutral gray dots, "aditya@dev — zsh" centered title, lines typing in one after another (whoami → Aditya Jogdand → AI Engineer → Researcher → LLM Systems → Backend), a green cursor block blinking after the last line finishes, and "Status ● Coding" pulsing bottom-right.
+Confirm: rounded window with soft shadow, orange-tinted title bar, three neutral gray dots, "aditya@dev — zsh" centered title, lines typing in one after another (whoami → Aditya Jogdand → AI Engineer → Researcher → LLM Systems → Backend), an orange cursor block blinking after the last line finishes, and "Status ● Coding" pulsing bottom-right in orange.
 
 - [ ] **Step 4: Commit**
 
@@ -399,7 +399,7 @@ Hand-authored SVGs live in `assets/`. This file documents how they're built so f
 ## Shared conventions
 
 - Font stack: `"JetBrains Mono", "Fira Code", "IBM Plex Mono", ui-monospace, monospace` — matches the README's monospace requirement even where the font isn't installed on the viewer's system (falls through to their OS monospace default).
-- Colors are always the literal hex values from the palette (`#0D1117`, `#161B22`, `#E6EDF3`, `#8B949E`, `#D97706`, `#3FB950`, `#30363D`) — never CSS variables for color, since GitHub loads each SVG as an independent image document with no shared stylesheet across files.
+- Colors are always the literal hex values from the palette (`#0D1117`, `#161B22`, `#E6EDF3`, `#8B949E`, `#D97706`, `#30363D`) — never CSS variables for color, since GitHub loads each SVG as an independent image document with no shared stylesheet across files. `#D97706` is the single accent — there is no separate green.
 - Animations use CSS `@keyframes` inside an inline `<style>` element. This only works because each SVG is referenced via `<img src="assets/...">` rather than pasted inline into the README body — GitHub strips `<style>` blocks and animations when SVG markup is inlined directly into markdown, but renders a linked SVG file as its own document with full CSS support.
 - Typewriter reveal effect (used in `banner.svg`): each line of text sits behind a `<clipPath>` containing a `<rect class="line-clip">`. That rect's `width` animates from `0` to a per-line `--w` custom property via the shared `typeLine` keyframe, with a per-line `animation-delay` inline style so lines reveal in sequence. `animation-fill-mode: both` keeps the rect at width `0` before its delay elapses and holds it at full `--w` after the animation finishes, so lines that haven't "typed" yet stay invisible instead of flashing full-width at load.
 - Blinking cursor: `opacity` toggled with `steps(1, end)`, not `ease`, so it snaps instantly like a real terminal cursor rather than fading in and out.
@@ -463,7 +463,7 @@ jobs:
         with:
           github_user_name: AdityaJogdand
           outputs: |
-            dist/snake.svg?color_snake=%23D97706&color_dots=%23161B22,%2330363D,%233FB950,%232EA043,%23238636
+            dist/snake.svg?color_snake=%23D97706&color_dots=%23161B22,%234D3319,%237C4A12,%23B3630C,%23D97706
 
       - name: Push snake output to output branch
         uses: crazy-max/ghaction-github-pages@v4
@@ -543,7 +543,7 @@ def main() -> None:
     check(README.exists(), "README.md was created")
     check(text.count("```ansi") == 7, "contains exactly 7 ansi fenced blocks")
     check("\x1b[38;2;217;119;6m" in text, "contains orange truecolor escape (#D97706)")
-    check("\x1b[38;2;63;185;80m" in text, "contains green truecolor escape (#3FB950)")
+    check("\x1b[38;2;63;185;80m" not in text, "contains no green truecolor escape (single-accent design, no #3FB950 anywhere)")
     check("\x1b[38;2;230;237;243m" in text, "contains primary-text truecolor escape (#E6EDF3)")
     check("\x1b[38;2;139;148;158m" in text, "contains secondary-text truecolor escape (#8B949E)")
     check("\x1b[0m" in text, "contains ANSI reset codes")
@@ -584,7 +584,6 @@ Run: python3 scripts/generate_readme.py
 
 from pathlib import Path
 
-GREEN = "#3FB950"
 ORANGE = "#D97706"
 PRIMARY = "#E6EDF3"
 SECONDARY = "#8B949E"
@@ -608,7 +607,7 @@ def ansi_block(lines: list[str]) -> str:
 
 
 ABOUT = ansi_block([
-    c(GREEN, "$ cat about.md"),
+    c(ORANGE, "$ cat about.md"),
     "",
     c(ORANGE, "Name:"),
     c(PRIMARY, "  Aditya Jogdand"),
@@ -628,7 +627,7 @@ ABOUT = ansi_block([
 ])
 
 SKILLS = ansi_block([
-    c(GREEN, "$ tree skills"),
+    c(ORANGE, "$ tree skills"),
     "",
     c(ORANGE, "AI/"),
     c(PRIMARY, "├── PyTorch"),
@@ -652,7 +651,7 @@ SKILLS = ansi_block([
 ])
 
 PROJECTS = ansi_block([
-    c(GREEN, "$ tree projects"),
+    c(ORANGE, "$ tree projects"),
     "",
     c(PRIMARY, "├── Adaptive-Cognitive-Runtime") + "  " + c(SECONDARY, "# self-tuning inference runtime that adapts context strategy per query"),
     c(PRIMARY, "├── Production-RAG") + "  " + c(SECONDARY, "# retrieval-augmented pipeline hardened for production traffic"),
@@ -662,24 +661,24 @@ PROJECTS = ansi_block([
 ])
 
 RESEARCH = ansi_block([
-    c(GREEN, "$ cat research.md"),
+    c(ORANGE, "$ cat research.md"),
     "",
     c(SECONDARY, "Current interests:"),
     "",
-    c(GREEN, "✓ ") + c(PRIMARY, "Agent Memory"),
-    c(GREEN, "✓ ") + c(PRIMARY, "Context Engineering"),
-    c(GREEN, "✓ ") + c(PRIMARY, "Long Context"),
-    c(GREEN, "✓ ") + c(PRIMARY, "Efficient Inference"),
-    c(GREEN, "✓ ") + c(PRIMARY, "Retrieval"),
-    c(GREEN, "✓ ") + c(PRIMARY, "AI Infrastructure"),
+    c(ORANGE, "✓ ") + c(PRIMARY, "Agent Memory"),
+    c(ORANGE, "✓ ") + c(PRIMARY, "Context Engineering"),
+    c(ORANGE, "✓ ") + c(PRIMARY, "Long Context"),
+    c(ORANGE, "✓ ") + c(PRIMARY, "Efficient Inference"),
+    c(ORANGE, "✓ ") + c(PRIMARY, "Retrieval"),
+    c(ORANGE, "✓ ") + c(PRIMARY, "AI Infrastructure"),
 ])
 
 STATS_CAPTION = ansi_block([
-    c(GREEN, "$ ./stats.sh"),
+    c(ORANGE, "$ ./stats.sh"),
 ])
 
 HELP = ansi_block([
-    c(GREEN, "$ help"),
+    c(ORANGE, "$ help"),
     "",
     c(SECONDARY, "Available commands"),
     "",
@@ -693,7 +692,7 @@ HELP = ansi_block([
 ])
 
 EXIT = ansi_block([
-    c(GREEN, "$ exit"),
+    c(ORANGE, "$ exit"),
     "",
     c(PRIMARY, "Thanks for visiting."),
 ])
@@ -840,7 +839,7 @@ The `ansi` fence color rendering and the third-party stats badges cannot be veri
 
 Run: `python3 -c "import scripts.generate_readme as g; print(g.ABOUT); print(g.SKILLS)"`
 
-Confirm in the terminal output: `$ cat about.md` and `$ tree skills` render in green, `Name:`/`Location:`/`Focus:`/`Education:`/`AI/`/`Backend/`/`Languages/` render in orange, and the values under them render in white or gray as specified.
+Confirm in the terminal output: `$ cat about.md`, `$ tree skills`, `Name:`/`Location:`/`Focus:`/`Education:`/`AI/`/`Backend/`/`Languages/` all render in orange (single accent, no green), and the values under them render in white or gray as specified.
 
 - [ ] **Step 4: Push to GitHub**
 
