@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12" role="img" aria-label="Status indicator">
+  <style>
+    .dot {
+      fill: #3FB950;
+      transform-origin: 8px 8px;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.25); }
+    }
+  </style>
+  <circle class="dot" cx="8" cy="8" r="5"/>
+</svg>
