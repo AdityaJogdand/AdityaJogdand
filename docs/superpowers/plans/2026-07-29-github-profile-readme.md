@@ -271,7 +271,7 @@ git commit -m "Add section-divider terminal chip"
     }
     .status-dot {
       fill: #D97706;
-      transform-origin: 700px 293px;
+      transform-origin: 662px 293px;
       animation: pulse 1.6s ease-in-out infinite;
     }
     @keyframes pulse {
@@ -312,9 +312,9 @@ git commit -m "Add section-divider terminal chip"
 
       <rect class="cursor" x="112" y="256" width="11" height="20"/>
 
-      <text x="630" y="297" font-size="13" fill="#8B949E">Status</text>
-      <circle class="status-dot" cx="700" cy="293" r="5"/>
-      <text x="714" y="297" font-size="13" fill="#E6EDF3">Coding</text>
+      <text x="600" y="297" font-size="13" fill="#8B949E">Status</text>
+      <circle class="status-dot" cx="662" cy="293" r="5"/>
+      <text x="676" y="297" font-size="13" fill="#E6EDF3">Coding</text>
     </g>
     <rect x="4" y="4" width="752" height="312" rx="14" fill="none" stroke="#30363D" stroke-width="1.5"/>
   </g>
