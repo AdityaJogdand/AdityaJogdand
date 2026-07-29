@@ -38,21 +38,14 @@
 
 ## GitHub Stats
 
-<table align="center">
-  <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=AdityaJogdand&show_icons=true&hide_border=true&bg_color=0D1117&title_color=D97706&icon_color=D97706&text_color=E6EDF3&count_private=true" alt="GitHub stats" />
-    </td>
-    <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com?user=AdityaJogdand&hide_border=true&background=0D1117&ring=D97706&fire=D97706&currStreakNum=E6EDF3&sideNums=E6EDF3&currStreakLabel=E6EDF3&sideLabels=8B949E&dates=8B949E" alt="GitHub streak" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaJogdand&layout=compact&hide_border=true&bg_color=0D1117&title_color=D97706&text_color=E6EDF3&count_private=true" alt="Top languages" />
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=AdityaJogdand&hide_border=true&background=0D1117&ring=D97706&fire=D97706&currStreakNum=E6EDF3&sideNums=E6EDF3&currStreakLabel=E6EDF3&sideLabels=8B949E&dates=8B949E" alt="GitHub streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AdityaJogdand&theme=github_dark" alt="GitHub stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AdityaJogdand&theme=github_dark" alt="Most used languages" />
+</div>
 
 ---
 
