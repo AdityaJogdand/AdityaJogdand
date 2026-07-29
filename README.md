@@ -6,14 +6,15 @@
 
 ## About
 
-> I build production AI systems — LLMs, autonomous agents, and RAG pipelines — and research the hard problems underneath: context engineering, efficient inference, and agent memory.
+> B.Tech AI & DS student at NMIMS, Navi Mumbai. Generative AI Intern at IIT Bombay. I build production AI systems — LLM-driven RAG pipelines, autonomous agents, and knowledge graph systems — and research the engineering challenges underneath: context management, efficient inference, and retrieval.
 
 | | |
 |:---|:---|
-| 🎓 | B.Tech AI & Data Science · India |
-| 🔭 | AI Systems · LLMs · Agents · RAG |
-| 🧠 | Context Engineering · Efficient Inference · Agent Memory |
-| 🛠️ | FastAPI · PostgreSQL · Docker |
+| 🎓 | B.Tech AI & Data Science · NMIMS, Navi Mumbai (3.45 / 4.0) |
+| 🏢 | Generative AI Intern · IIT Bombay |
+| 🔭 | AI Systems · LLMs · RAG · Agents · Knowledge Graphs |
+| 🧠 | Context Engineering · Efficient Inference · Retrieval |
+| 🛠️ | Python · FastAPI · LangChain · LangGraph · Docker |
 | 📬 | ajogdand112@gmail.com |
 
 ---
@@ -29,13 +30,19 @@
 **Backend & Infrastructure**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=fastapi,flask,postgres,redis,docker,linux&theme=dark" alt="FastAPI, Flask, PostgreSQL, Redis, Docker, Linux" />
+  <img src="https://skillicons.dev/icons?i=fastapi,flask,redis,docker,gcp,postman&theme=dark" alt="FastAPI, Flask, Redis, Docker, GCP, Postman" />
+</p>
+
+**Databases**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=mysql,sqlite,mongodb,firebase,supabase&theme=dark" alt="MySQL, SQLite, MongoDB, Firebase, Supabase" />
 </p>
 
 **Languages & Tools**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,cpp,js,git,vscode&theme=dark" alt="Python, C++, JavaScript, Git, VSCode" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,r,git,vscode,androidstudio&theme=dark" alt="Python, C++, Java, JavaScript, R, Git, VSCode, Android Studio" />
 </p>
 
 ---
@@ -64,13 +71,11 @@
 
 ## Projects
 
-| Project | Description |
-|---|---|
-| Adaptive-Cognitive-Runtime | Self-tuning inference runtime that adapts context strategy per query |
-| Production-RAG | Retrieval-augmented pipeline hardened for production traffic |
-| APK-Reasoning-System | Static + LLM-assisted reasoning over Android APK behavior |
-| Context-Compression | Long-context compression for cheaper, faster LLM calls |
-| Knowledge-Graphs | Entity/relation extraction feeding graph-grounded retrieval |
+| Project | Stack | Description |
+|---|---|---|
+| **Production Grade RAG** | Python · Qwen3 · Llama 3.2 · Redis · Celery · Langfuse | Fully local production RAG with hybrid retrieval (vector + keyword, RRF fusion), CrossEncoder reranking, dual-layer Redis caching, I/O guardrails, async ingestion. MRR = 0.96, Precision@5 = 0.50 |
+| **CodeGraph AI** | Python · LangGraph · HTML | Python library for intelligent codebase analysis — builds knowledge graphs over source code for structured reasoning and retrieval |
+| **IIT Bombay · Learning Analytics** | Python · LangChain · RAG · FastAPI | AI-powered platform using TNA & ENA to analyse student behaviour and cognitive patterns; LLM-driven RAG pipeline surfaces actionable insights through an interactive educator dashboard |
 
 ---
 
