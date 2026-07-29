@@ -44,11 +44,8 @@ AdityaJogdand/
 │       ├── category-ai.svg
 │       ├── category-backend.svg
 │       └── category-languages.svg
-├── svg/
-│   └── README.md
-└── .github/
-    └── workflows/
-        └── snake.yml
+└── svg/
+    └── README.md
 ```
 
 - `assets/banner.svg` — hero animated terminal window.
@@ -56,7 +53,6 @@ AdityaJogdand/
 - `assets/icons/status-dot.svg` — pulsing orange dot used next to "Status ● Coding" in the banner.
 - `assets/icons/category-*.svg` — three minimal single-color line glyphs (chip/cpu for AI, server for Backend, angle-brackets for Languages), placed inline next to the corresponding `tree skills` category headers.
 - `svg/README.md` — short notes describing how the hand-authored SVG markup and animation timings are structured, so future edits to the animated assets don't require reverse-engineering the keyframes from scratch.
-- `.github/workflows/snake.yml` — scheduled GitHub Action using `platane/snk` to generate a "snake eats the contribution graph" SVG, dark-themed with the palette above, committed to an output branch and embedded in the README. Provides real, live contribution-graph content rather than a static placeholder.
 
 ## Hero banner (assets/banner.svg)
 
@@ -96,7 +92,6 @@ Sections, in order, each preceded by an `<h2>` and (from the second section onwa
 6. **GitHub Stats** — `$ ./stats.sh` caption, then a centered `<table>`:
    - Row 1: `github-readme-stats` card + `github-readme-streak-stats` card side by side, both using custom-theme query params set to the exact palette hex values (no `#` prefix, per that service's URL format): `bg_color=0D1117&title_color=D97706&icon_color=D97706&text_color=E6EDF3&border_color=30363D`.
    - Row 2: top-languages card, same custom theme params, full width.
-   - Row 3: the generated snake contribution-graph SVG from the Action, full width.
 7. **Command Palette** (`$ help`) — lists `whoami`, `skills`, `projects`, `research`, `github`, `resume`, `contact`. Only `resume` and `contact` are real links: `contact` → `mailto:ajogdand375@gmail.com` and `https://www.linkedin.com/in/adityanjogdand/`; `resume` → a clearly marked placeholder anchor (`#TODO_RESUME_LINK`) with a visible `# TODO: add hosted resume link` note so it's easy to find and swap later. The rest render as plain (non-linked) list text.
 8. **Footer** (`$ exit`) — "Thanks for visiting.", centered.
 
@@ -105,4 +100,4 @@ Sections, in order, each preceded by an `<h2>` and (from the second section onwa
 - No JavaScript anywhere (SVG/CSS animation only, per requirement).
 - No light-mode palette — single fixed dark theme.
 - No real repo links for the projects tree (explicit user decision).
-- No functional content in `.github/` beyond the snake-graph workflow.
+- No `.github/` directory — the contribution-snake workflow was scoped and then dropped by request; GitHub Stats is just the two badge cards + top-languages card.
