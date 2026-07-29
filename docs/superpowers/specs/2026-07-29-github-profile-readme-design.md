@@ -42,7 +42,8 @@ AdityaJogdand/
 │       ├── status-dot.svg
 │       ├── category-ai.svg
 │       ├── category-backend.svg
-│       └── category-languages.svg
+│       ├── category-languages.svg
+│       └── mascot.svg
 ├── svg/
 │   └── README.md
 └── .github/
@@ -54,6 +55,7 @@ AdityaJogdand/
 - `assets/terminal.svg` — small reusable "> _" divider chip placed between major README sections instead of a plain `---` rule.
 - `assets/icons/status-dot.svg` — pulsing green dot used next to "Status ● Coding" in the banner.
 - `assets/icons/category-*.svg` — three minimal single-color line glyphs (chip/cpu for AI, server for Backend, angle-brackets for Languages), placed inline next to the corresponding `tree skills` category headers.
+- `assets/icons/mascot.svg` — a small, fully original single-stroke line-art creature (own design, not based on any existing brand mascot — not a crab, not an octopus, not GitHub's Octocat) rendered in the orange accent color. Purely a personality accent, placed once in the footer beside the `$ exit` block. No animation, minimal detail, sized small enough to stay a quiet accent rather than a focal point.
 - `svg/README.md` — short notes describing how the hand-authored SVG markup and animation timings are structured, so future edits to the animated assets don't require reverse-engineering the keyframes from scratch.
 - `.github/workflows/snake.yml` — scheduled GitHub Action using `platane/snk` to generate a "snake eats the contribution graph" SVG, dark-themed with the palette above, committed to an output branch and embedded in the README. Provides real, live contribution-graph content rather than a static placeholder.
 
@@ -97,7 +99,7 @@ Sections, in order, each preceded by an `<h2>` and (from the second section onwa
    - Row 2: top-languages card, same custom theme params, full width.
    - Row 3: the generated snake contribution-graph SVG from the Action, full width.
 7. **Command Palette** (`$ help`) — lists `whoami`, `skills`, `projects`, `research`, `github`, `resume`, `contact`. Only `resume` and `contact` are real links: `contact` → `mailto:ajogdand375@gmail.com` and `https://www.linkedin.com/in/adityanjogdand/`; `resume` → a clearly marked placeholder anchor (`#TODO_RESUME_LINK`) with a visible `# TODO: add hosted resume link` note so it's easy to find and swap later. The rest render as plain (non-linked) list text.
-8. **Footer** (`$ exit`) — "Thanks for visiting.", centered.
+8. **Footer** (`$ exit`) — "Thanks for visiting.", centered, with `assets/icons/mascot.svg` displayed small alongside it.
 
 ## Out of scope
 
