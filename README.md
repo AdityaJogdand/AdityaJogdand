@@ -10,7 +10,7 @@
 - 🔭 Building **AI Systems** — LLMs, Agents, RAG pipelines
 - 🧠 Researching **Context Engineering**, **Agent Memory**, **Efficient Inference**
 - 🛠️ Production **Backend Engineering** — FastAPI, PostgreSQL, Docker
-- 📬 **ajogdand375@gmail.com**
+- 📬 **ajogdand112@gmail.com**
 
 ---
 
