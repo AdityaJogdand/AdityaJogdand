@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="100%" role="img" aria-label="Terminal window showing whoami output for Aditya Jogdand">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0D1117"/>
-      <stop offset="100%" stop-color="#161B22"/>
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="100%" stop-color="#F2EDE4"/>
     </linearGradient>
     <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1F1409"/>
-      <stop offset="100%" stop-color="#161B22"/>
+      <stop offset="0%" stop-color="#EDE5D8"/>
+      <stop offset="100%" stop-color="#E8DDD0"/>
     </linearGradient>
     <clipPath id="winClip">
       <rect x="4" y="4" width="752" height="312" rx="14"/>
     </clipPath>
     <filter id="winShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#C4A882" flood-opacity="0.30"/>
     </filter>
   </defs>
 
@@ -57,37 +57,37 @@
       <rect x="4" y="4" width="752" height="312" fill="url(#bgGrad)"/>
       <rect x="4" y="4" width="752" height="42" fill="url(#titleGrad)"/>
 
-      <circle cx="28" cy="25" r="5" fill="#6E7681"/>
-      <circle cx="48" cy="25" r="5" fill="#6E7681"/>
-      <circle cx="68" cy="25" r="5" fill="#6E7681"/>
-      <text x="380" y="30" text-anchor="middle" font-size="13" fill="#8B949E">aditya@dev — zsh</text>
+      <circle cx="28" cy="25" r="5" fill="#C4B8A8"/>
+      <circle cx="48" cy="25" r="5" fill="#C4B8A8"/>
+      <circle cx="68" cy="25" r="5" fill="#C4B8A8"/>
+      <text x="380" y="30" text-anchor="middle" font-size="13" fill="#9A8572">aditya@dev — zsh</text>
 
       <clipPath id="clipLine1"><rect class="line-clip" x="32" y="72" height="26" style="--w:150px; animation-delay:0.2s;"/></clipPath>
       <text clip-path="url(#clipLine1)" x="32" y="92" font-size="20">
-        <tspan fill="#D97706">&gt; </tspan><tspan fill="#E6EDF3">whoami</tspan>
+        <tspan fill="#D97706">&gt; </tspan><tspan fill="#5C4A2A">whoami</tspan>
       </text>
 
       <clipPath id="clipLine2"><rect class="line-clip" x="32" y="118" height="34" style="--w:280px; animation-delay:1.0s;"/></clipPath>
-      <text clip-path="url(#clipLine2)" x="32" y="144" font-size="26" font-weight="600" fill="#E6EDF3">Aditya Jogdand</text>
+      <text clip-path="url(#clipLine2)" x="32" y="144" font-size="26" font-weight="600" fill="#1C1C1C">Aditya Jogdand</text>
 
       <clipPath id="clipLine3"><rect class="line-clip" x="32" y="170" height="24" style="--w:170px; animation-delay:2.1s;"/></clipPath>
-      <text clip-path="url(#clipLine3)" x="32" y="188" font-size="18" fill="#8B949E">AI Engineer</text>
+      <text clip-path="url(#clipLine3)" x="32" y="188" font-size="18" fill="#7A6A58">AI Engineer</text>
 
       <clipPath id="clipLine4"><rect class="line-clip" x="32" y="198" height="24" style="--w:160px; animation-delay:2.6s;"/></clipPath>
-      <text clip-path="url(#clipLine4)" x="32" y="216" font-size="18" fill="#8B949E">Researcher</text>
+      <text clip-path="url(#clipLine4)" x="32" y="216" font-size="18" fill="#7A6A58">Researcher</text>
 
       <clipPath id="clipLine5"><rect class="line-clip" x="32" y="226" height="24" style="--w:170px; animation-delay:3.1s;"/></clipPath>
-      <text clip-path="url(#clipLine5)" x="32" y="244" font-size="18" fill="#8B949E">LLM Systems</text>
+      <text clip-path="url(#clipLine5)" x="32" y="244" font-size="18" fill="#7A6A58">LLM Systems</text>
 
       <clipPath id="clipLine6"><rect class="line-clip" x="32" y="254" height="24" style="--w:130px; animation-delay:3.6s;"/></clipPath>
-      <text clip-path="url(#clipLine6)" x="32" y="272" font-size="18" fill="#8B949E">Backend</text>
+      <text clip-path="url(#clipLine6)" x="32" y="272" font-size="18" fill="#7A6A58">Backend</text>
 
       <rect class="cursor" x="112" y="256" width="11" height="20"/>
 
-      <text x="600" y="297" font-size="13" fill="#8B949E">Status</text>
+      <text x="600" y="297" font-size="13" fill="#9A8572">Status</text>
       <circle class="status-dot" cx="662" cy="293" r="5"/>
-      <text x="676" y="297" font-size="13" fill="#E6EDF3">Coding</text>
+      <text x="676" y="297" font-size="13" fill="#5C4A2A">Coding</text>
     </g>
-    <rect x="4" y="4" width="752" height="312" rx="14" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <rect x="4" y="4" width="752" height="312" rx="14" fill="none" stroke="#D4C5B0" stroke-width="1.5"/>
   </g>
 </svg>
