@@ -79,7 +79,7 @@ git commit -m "Scaffold profile README repo structure" --allow-empty
 - Create: `assets/icons/category-languages.svg`
 
 **Interfaces:**
-- Produces: four static asset files at the paths above, referenced by Task 5 (banner) and Task 8 (README generator).
+- Produces: four static asset files at the paths above. The three category-*.svg files are referenced by Task 8 (README generator). status-dot.svg is not referenced anywhere — Task 5's banner inlines its own status-dot circle rather than embedding this file — but it's kept as a documented standalone reusable asset.
 
 - [ ] **Step 1: Create `assets/icons/status-dot.svg`**
 

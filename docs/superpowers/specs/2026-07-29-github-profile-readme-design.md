@@ -50,7 +50,6 @@ AdityaJogdand/
 
 - `assets/banner.svg` — hero animated terminal window.
 - `assets/terminal.svg` — small reusable "> _" divider chip placed between major README sections instead of a plain `---` rule.
-- `assets/icons/status-dot.svg` — pulsing orange dot used next to "Status ● Coding" in the banner.
 - `assets/icons/category-*.svg` — three minimal single-color line glyphs (chip/cpu for AI, server for Backend, angle-brackets for Languages), placed inline next to the corresponding `tree skills` category headers.
 - `svg/README.md` — short notes describing how the hand-authored SVG markup and animation timings are structured, so future edits to the animated assets don't require reverse-engineering the keyframes from scratch.
 

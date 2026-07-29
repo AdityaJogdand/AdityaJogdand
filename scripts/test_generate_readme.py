@@ -11,6 +11,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 README = REPO_ROOT / "README.md"
 
+PROJECT_NAMES = [
+    "Adaptive-Cognitive-Runtime",
+    "Production-RAG",
+    "APK-Reasoning-System",
+    "Context-Compression",
+    "Knowledge-Graphs",
+]
+
 
 def check(condition: bool, message: str) -> None:
     if not condition:
@@ -35,13 +43,17 @@ def main() -> None:
     check("\x1b[0m" in text, "contains ANSI reset codes")
     check('<img src="assets/banner.svg"' in text, "hero banner is embedded")
     check('<img src="assets/terminal.svg"' in text, "section divider is embedded")
+    check('<img src="assets/icons/category-ai.svg"' in text, "AI category icon is embedded")
+    check('<img src="assets/icons/category-backend.svg"' in text, "Backend category icon is embedded")
+    check('<img src="assets/icons/category-languages.svg"' in text, "Languages category icon is embedded")
     check("mailto:ajogdand375@gmail.com" in text, "contact mailto link present")
     check("https://www.linkedin.com/in/adityanjogdand/" in text, "LinkedIn link present")
     check("#TODO_RESUME_LINK" in text, "resume placeholder link present")
     check("github-readme-stats.vercel.app" in text, "GitHub stats card embedded")
     check("streak-stats.demolab.com" in text, "streak stats card embedded")
     check("Adaptive-Cognitive-Runtime" in text, "projects section lists Adaptive-Cognitive-Runtime")
-    check("](https://github.com/AdityaJogdand/Adaptive-Cognitive-Runtime)" not in text, "project names are not hyperlinked")
+    for name in PROJECT_NAMES:
+        check(f"[{name}](" not in text, f"{name} is not wrapped in a markdown link")
 
     print("\nAll checks passed.")
 
