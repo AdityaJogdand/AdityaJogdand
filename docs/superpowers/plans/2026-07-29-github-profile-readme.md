@@ -17,7 +17,7 @@
 - GitHub username for all badge/stats/link URLs: `AdityaJogdand`.
 - Projects tree entries are plain styled text, **not hyperlinked** (explicit user decision).
 - `resume` command links to a clearly marked placeholder (`#TODO_RESUME_LINK` + visible TODO comment); `contact` links to `mailto:ajogdand375@gmail.com` and `https://www.linkedin.com/in/adityanjogdand/` (both real).
-- No mascot/creature resembling any existing brand character (not Clawd, not an octopus, not GitHub's Octocat) — `assets/icons/mascot.svg` must be an original design.
+- No mascot/creature graphic anywhere in this repo (dropped by request after being scoped — see Task 3).
 - Window-control dots in the banner are neutral gray-scale, not red/yellow/green.
 - Spec reference: `docs/superpowers/specs/2026-07-29-github-profile-readme-design.md`.
 
@@ -155,48 +155,11 @@ git commit -m "Add status dot and skill-category icon assets"
 
 ---
 
-### Task 3: Original mascot glyph
+### Task 3: [REMOVED] Mascot glyph
 
-**Files:**
-- Create: `assets/icons/mascot.svg`
+This task originally added `assets/icons/mascot.svg` (an original owl glyph, later reconsidered as a bat, then dropped) for the footer. The user decided against having any mascot at all. An implementer subagent had already committed the owl version before this decision — that commit was reverted with `git rm assets/icons/mascot.svg`.
 
-**Interfaces:**
-- Produces: `assets/icons/mascot.svg`, referenced by Task 8 (README generator, footer section).
-
-- [ ] **Step 1: Create `assets/icons/mascot.svg`**
-
-An original, single-stroke line-art creature (small owl silhouette) in the accent orange. Not based on any existing brand mascot.
-
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#D97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mascot">
-  <path d="M9 8 L11 3 L13 7"/>
-  <path d="M23 8 L21 3 L19 7"/>
-  <path d="M8 12c0-4.5 3.5-8 8-8s8 3.5 8 8v7c0 5-3.5 9-8 9s-8-4-8-9v-7z"/>
-  <circle cx="12.5" cy="14" r="2.2"/>
-  <circle cx="19.5" cy="14" r="2.2"/>
-  <circle cx="12.5" cy="14" r="0.6" fill="#D97706"/>
-  <circle cx="19.5" cy="14" r="0.6" fill="#D97706"/>
-  <path d="M15 17.5 L16 19.5 L17 17.5"/>
-  <path d="M12 25c1.5 1 2.7 1.4 4 1.4s2.5-.4 4-1.4"/>
-</svg>
-```
-
-- [ ] **Step 2: Validate well-formed XML**
-
-Run: `python3 -c "import xml.dom.minidom as m; m.parse('assets/icons/mascot.svg'); print('OK')"`
-Expected: `OK`, no traceback.
-
-- [ ] **Step 3: Manual visual check**
-
-Run: `qlmanage -t -s 400 -o /tmp assets/icons/mascot.svg`
-Then open `/tmp/mascot.svg.png` (e.g. `open /tmp/mascot.svg.png`) and confirm it renders as a small owl-like glyph with no visual glitches (this also catches any coordinate typos that would otherwise only surface as a blank/broken image).
-
-- [ ] **Step 4: Commit**
-
-```bash
-git add assets/icons/mascot.svg
-git commit -m "Add original mascot glyph"
-```
+No files are created by this task. Task 8's generator template and Task 6's documentation table must not reference `assets/icons/mascot.svg` — see their updated content below (already reflects the removal).
 
 ---
 
@@ -413,7 +376,6 @@ Hand-authored SVGs live in `assets/`. This file documents how they're built so f
 | `assets/terminal.svg` | Section-divider chip | Yes — blinking cursor block |
 | `assets/icons/status-dot.svg` | Standalone pulsing dot | Yes |
 | `assets/icons/category-ai.svg`, `category-backend.svg`, `category-languages.svg` | Static single-color line icons for the skills section | No |
-| `assets/icons/mascot.svg` | Original footer glyph | No |
 
 ## Editing
 
@@ -502,7 +464,7 @@ git commit -m "Add scheduled contribution snake workflow"
 - Create (generated, not hand-edited): `README.md`
 
 **Interfaces:**
-- Consumes: `assets/banner.svg`, `assets/terminal.svg`, `assets/icons/category-ai.svg`, `assets/icons/category-backend.svg`, `assets/icons/category-languages.svg`, `assets/icons/mascot.svg` (all as literal relative-path strings, not imported).
+- Consumes: `assets/banner.svg`, `assets/terminal.svg`, `assets/icons/category-ai.svg`, `assets/icons/category-backend.svg`, `assets/icons/category-languages.svg` (all as literal relative-path strings, not imported).
 - Produces: `README.md` at the repo root.
 
 This task is written test-first: the test script is written and run against a not-yet-existing generator so it fails for the right reason, then the generator is implemented to make it pass.
@@ -555,7 +517,6 @@ def main() -> None:
     check("github-readme-stats.vercel.app" in text, "GitHub stats card embedded")
     check("streak-stats.demolab.com" in text, "streak stats card embedded")
     check("AdityaJogdand/AdityaJogdand/output/dist/snake.svg" in text, "snake contribution graph embedded")
-    check('<img src="assets/icons/mascot.svg"' in text, "footer mascot glyph embedded")
     check("Adaptive-Cognitive-Runtime" in text, "projects section lists Adaptive-Cognitive-Runtime")
     check("](https://github.com/AdityaJogdand/Adaptive-Cognitive-Runtime)" not in text, "project names are not hyperlinked")
 
@@ -784,8 +745,6 @@ README = f"""<div align="center">
 <div align="center">
 
 {EXIT}
-
-<img src="assets/icons/mascot.svg" width="28" alt="">
 
 </div>
 """
